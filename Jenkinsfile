@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/lily4499/python-app.git'
+                git url: 'https://github.com/lily4499/python-app.git', branch: 'main'
             }
         }
         stage('Build Docker Image') {
