@@ -5,6 +5,12 @@ pipeline {
         IMAGE_TAG = "latest"
     }
     stages {
+
+        stage('Clean Workspace') {
+            steps {
+                cleanWs() // Cleans up the workspace using the Workspace Cleanup Plugin
+            }
+        }
         stage('Checkout Code') {
             steps {
                 git 'https://github.com/lily4499/python-app.git'
